@@ -1,4 +1,4 @@
-import aboutMe from "../assets/Untitled-2.png"
+import aboutMe from "../assets/profile.jpeg"
 import {motion} from "framer-motion";
 import "../index.css";
 const About = () => {
@@ -28,11 +28,7 @@ const About = () => {
              className="w-full lg:w-1/2 ">
                     <div className="flex justify-center lg:justify-start">
                         <p className="my-10 max-w-xl py-6">
-                        I am a dedicated and versatile full stack developer & graphic designer with a passion for creating efficient and user-friendly web applications. 
-                        With experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, Adobe Photoshop, Figma and Express. 
-                        My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. 
-                        I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. 
-                        Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.
+                        Hi, I’m Shubh Mishra — a Computer Science undergraduate at Jaypee University of Engineering and Technology. I have experience developing stock trading bots, predictive machine learning applications, and full-stack web apps. With a strong background in Python, C++, SQL, and modern web technologies, I aim to design software that is not just functional but meaningful. I enjoy diving into new challenges, whether it's automating workflows, visualizing data for better insights, or enhancing user experiences through smart interfaces. Outside of coding, I’m constantly exploring new tools, APIs, and frameworks to push my skills to the next level.
                         </p>
                     </div>
             </motion.div>

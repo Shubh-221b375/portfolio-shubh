@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from "../assets/Untitled-1.png";
+import profilePic from "../assets/about.jpg";
 import {motion} from "framer-motion";
 import { HERO_CONTENT } from '../constants';
 import "../index.css";
@@ -24,14 +24,14 @@ export const Hero = () => {
                         initial="hidden"
                         animate="visible"
                         className='pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-6xl'>
-                        Lakshya Pradhan
+                        Shubh Mishra
                     </motion.h1>
                     <motion.span 
                         variants={container(0.5)}
                         initial="hidden"
                         animate="visible"
                         className='bg-gradient-to-r from-pink-500 via-slate-400 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent'>
-                        Full Stack Developer & Graphic Designer
+                        Data Analyst & Full Stack Web Developer
                     </motion.span>
                     <motion.p 
                         variants={container(1)}

@@ -34,14 +34,14 @@ function Navbar() {
 
   return (
     <nav
-      className={`max-md:mt-4 max-md:py-4 px-10  fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? "backdrop-blur-lg " : "bg-transparent"
+      className={`max-md:mt-4 max-md:py-4 px-10 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled || isMenuOpen ? "backdrop-blur-lg" : "bg-transparent"
       }`}
     >
       <div className="flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-          <img className="w-10" src={logo} alt="logo" />
+          <img className="w-20" src={logo} alt="logo" />
         </div>
 
         {/* Hamburger Menu Button */}
@@ -62,7 +62,7 @@ function Navbar() {
             isMenuOpen ? "flex" : "hidden"
           } absolute top-full left-0 w-full bg-black/70 backdrop-blur-lg p-6 lg:flex lg:flex-row lg:static lg:bg-transparent lg:w-auto gap-4 items-center justify-center`}
         >
-          {/* Centered Links (Home, About, etc.) */}
+          {/* Centered Links */}
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center w-full lg:w-auto">
             <a
               href="#home"
@@ -105,7 +105,7 @@ function Navbar() {
           {/* Social Media Icons */}
           <div className="flex flex-col lg:flex-row gap-4 text-xl text-white justify-center items-center mt-4 lg:mt-0 lg:ml-6">
             <a
-              href="https://www.linkedin.com/in/lakshya-pradhan-a78a06246/"
+              href="https://www.linkedin.com/in/shubh-mishra-558690253"
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
@@ -115,17 +115,17 @@ function Navbar() {
               <FaLinkedin />
             </a>
             <a
-              href="https://github.com/LakshyaPrd"
+              href="https://github.com/Shubh-221b375"
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"
               aria-label="GitHub"
-              className=" transition-colors duration-200"
+              className="transition-colors duration-200"
             >
               <FaGithub />
             </a>
             <a
-              href="https://www.instagram.com/laxey.pr?igsh=MXZ1Z3c4cGQ2bGpheA=="
+              href="https://www.instagram.com/shubhmsr/"
               target="_blank"
               rel="noopener noreferrer"
               title="Instagram"
@@ -135,7 +135,7 @@ function Navbar() {
               <FaInstagram />
             </a>
             <a
-              href="https://x.com/PradhanLak9655"
+              href="https://twitter.com/Shubhmsr?t=9bujMYFiB4_QcWwz0LnSJg&s=09"
               target="_blank"
               rel="noopener noreferrer"
               title="Twitter"
