@@ -73,7 +73,7 @@ export const PROJECTS = [
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
     github: "https://github.com/Shubh-221b375/magic-portfolio-for-next-",
-    live: "https://github.com/Shubh-221b375/magic-portfolio-for-next-",
+    live: "https://portfolio-shubh.vercel.app/",
   },
 ];
 
