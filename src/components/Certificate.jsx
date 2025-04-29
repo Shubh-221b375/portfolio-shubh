@@ -30,7 +30,7 @@ const Certificate = () =>{
             <img
               src={cert.image}
               alt={`Certificate ${index + 1}`}
-              className="rounded shadow-lg object-cover w-full h-auto"
+              className="rounded shadow-lg object-cover w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110 "
             />
           </motion.div>
         ))}

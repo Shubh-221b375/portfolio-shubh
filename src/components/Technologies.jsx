@@ -80,12 +80,12 @@ const Technologies = () => {
   </motion.div>
 
   {/* Git */}
-  <motion.div variants={iconVar(4)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+  <motion.div variants={iconVar(5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
     <SiGit className="text-5xl" />
   </motion.div>
 
   {/* TailwindCSS */}
-  <motion.div variants={iconVar(4)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+  <motion.div variants={iconVar(7)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
     <SiTailwindcss className="text-5xl text-blue-600" />
   </motion.div>
 
@@ -98,17 +98,17 @@ const Technologies = () => {
   
 
   {/* Tableau */}
-  <motion.div variants={iconVar(4)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+  <motion.div variants={iconVar(6)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
     <SiTableau className="text-5xl text-blue-500" />
   </motion.div>
 
   {/* C/C++ */}
-  <motion.div variants={iconVar(4)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+  <motion.div variants={iconVar(3)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
     <SiCplusplus className="text-5xl text-blue-500" />
   </motion.div>
 
   {/* VN (Video Editing) */}
-  <motion.div variants={iconVar(4)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+  <motion.div variants={iconVar(5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
     <FaVideo className="text-5xl text-red-500" />
   </motion.div>
 
