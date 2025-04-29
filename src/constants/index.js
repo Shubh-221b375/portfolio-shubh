@@ -4,6 +4,14 @@ import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
+// Importing certificate images (JPEG format)
+import cert1 from "../assets/certificates/1.jpeg";
+import cert2 from "../assets/certificates/2.jpeg";
+import cert3 from "../assets/certificates/3.jpeg";
+import cert4 from "../assets/certificates/4.png";
+import cert5 from "../assets/certificates/5.jpeg";
+import cert6 from "../assets/certificates/6.png";
+
 // Hero Section Content
 export const HERO_CONTENT = `Aspiring software developer and data enthusiast passionate about building impactful digital solutions. Skilled in Python, SQL, web development, and data analytics, I love crafting projects that blend technical precision with real-world utility. Always curious, always learning.`;
 
@@ -23,7 +31,7 @@ export const EXPERIENCES = [
     company: "Simpkins School, Agra",
   },
   {
-    year: "2010 - 2019",
+    year: "2018 - 2019",
     role: "High School Education",
     company: "Simpkins School, Agra",
   },
@@ -67,6 +75,16 @@ export const PROJECTS = [
     github: "https://github.com/Shubh-221b375/magic-portfolio-for-next-",
     live: "https://github.com/Shubh-221b375/magic-portfolio-for-next-",
   },
+];
+
+// Certification Images
+export const CERTIFICATIONS = [
+  { image: cert1 },
+  { image: cert2 },
+  { image: cert3 },
+  { image: cert4 },
+  { image: cert5 },
+  { image: cert6 },
 ];
 
 // Contact Info

@@ -34,14 +34,14 @@ function Navbar() {
 
   return (
     <nav
-      className={`max-md:mt-4 max-md:py-4 px-10 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`max-md:mt-1 max-md:h-[65px]  px-10 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen ? "backdrop-blur-lg" : "bg-transparent"
       }`}
     >
       <div className="flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-          <img className="w-20" src={logo} alt="logo" />
+          <img className="w-20 " src={logo} alt="logo" />
         </div>
 
         {/* Hamburger Menu Button */}

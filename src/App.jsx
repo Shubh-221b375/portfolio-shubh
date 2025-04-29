@@ -5,6 +5,7 @@ import About from './components/About';
 import Technologies from './components/Technologies';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Certificate from './components/Certificate';
 import Contact from './components/Contact';
 
 
@@ -21,13 +22,16 @@ const App = () => {
       </div>
       
 
-      <div className='container mx-auto px-8'>
+      <div className='container mx-auto px-8 overflow-auto'>
         <Navbar />
         <Hero />
         <About/>
+        
         <Experience/>
         <Technologies/>
+        <Certificate/>
         <Projects/>
+        
         <Contact/>
       </div>
     </div>
