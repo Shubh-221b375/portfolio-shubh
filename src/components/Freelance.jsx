@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardContent,
-} from "../components/components/ui/card";
+} from "../components/components/ui/card"; // Adjust this path as needed
 import "../index.css";
 
 const cardVariants = {
@@ -48,14 +48,11 @@ const projects = [
 ];
 
 const Freelance = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const toggleExpand = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
-
   return (
-    <section id="freelance" className="relative border-b border-neutral-900 pb-24 pt-32">
+    <section
+      id="freelance"
+      className="relative border-b border-neutral-900 pb-24 pt-32"
+    >
       {/* Background blur */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-fuchsia-600/20 via-purple-700/10 to-indigo-500/20 blur-3xl opacity-30" />
       <div className="container mx-auto px-4">
@@ -101,20 +98,23 @@ const Freelance = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="group cursor-pointer"
-                onClick={() => toggleExpand(index)}
               >
                 <motion.div
-                  initial={{ boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
-                  animate={{
-                    height: expandedIndex === index ? "auto" : 140,
+                  initial={{ height: 140, boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
+                  whileHover={{
+                    height: "auto",
                     boxShadow:
-                      expandedIndex === index
-                        ? "0 10px 44px rgba(168,85,247,0.10), 0 2px 20px rgba(139,92,246,0.14)"
-                        : "0 1px 4px rgba(0,0,0,0.05)",
-                    background: expandedIndex === index ? "rgba(139,92,246,0.06)" : "transparent",
+                      "0 10px 44px rgba(168,85,247,0.10), 0 2px 20px rgba(139,92,246,0.14)",
+                    background: "rgba(139,92,246,0.06)",
                   }}
-                  transition={{ duration: 0.42, type: "tween", ease: "easeInOut" }}
-                  style={{ willChange: "height, box-shadow, background" }}
+                  transition={{
+                    duration: 0.42,
+                    type: "tween",
+                    ease: "easeInOut",
+                  }}
+                  style={{
+                    willChange: "height, box-shadow, background",
+                  }}
                   className="relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-transparent transition-all"
                 >
                   {/* Gradient border */}
@@ -125,19 +125,14 @@ const Freelance = () => {
                         {project.title}
                       </CardTitle>
                     </CardHeader>
-
-                    <motion.div
-                      initial={false}
-                      animate={{
-                        opacity: expandedIndex === index ? 1 : 0,
-                        y: expandedIndex === index ? 0 : 10,
-                        height: expandedIndex === index ? "auto" : 0,
-                      }}
-                      transition={{ duration: 0.35 }}
-                      className="overflow-hidden text-sm text-neutral-200 leading-relaxed"
+                    {/* Description shows only on hover */}
+                    <CardContent
+                      className="p-0 mt-2 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-screen transition-all duration-400 ease-in-out"
                     >
-                      {project.details}
-                    </motion.div>
+                      <p className="text-sm text-neutral-200 leading-relaxed">
+                        {project.details}
+                      </p>
+                    </CardContent>
                   </div>
                 </motion.div>
               </motion.div>
