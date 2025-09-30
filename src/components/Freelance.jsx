@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardContent,
-} from "../components/components/ui/card"; // Adjust this path as needed
+} from "../components/components/ui/card";
 import "../index.css";
 
 const cardVariants = {
@@ -48,11 +48,14 @@ const projects = [
 ];
 
 const Freelance = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
-    <section
-      id="freelance"
-      className="relative border-b border-neutral-900 pb-24 pt-32"
-    >
+    <section id="freelance" className="relative border-b border-neutral-900 pb-24 pt-32">
       {/* Background blur */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-fuchsia-600/20 via-purple-700/10 to-indigo-500/20 blur-3xl opacity-30" />
       <div className="container mx-auto px-4">
@@ -98,9 +101,22 @@ const Freelance = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="group cursor-pointer"
+                onClick={() => toggleExpand(index)}
               >
                 <motion.div
                   initial={{ height: 140, boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
+                  animate={{
+                    height:
+                      expandedIndex === index ? "auto" : 140,
+                    boxShadow:
+                      expandedIndex === index
+                        ? "0 10px 44px rgba(168,85,247,0.10), 0 2px 20px rgba(139,92,246,0.14)"
+                        : "0 1px 4px rgba(0,0,0,0.05)",
+                    background:
+                      expandedIndex === index
+                        ? "rgba(139,92,246,0.06)"
+                        : "transparent",
+                  }}
                   whileHover={{
                     height: "auto",
                     boxShadow:
@@ -125,14 +141,18 @@ const Freelance = () => {
                         {project.title}
                       </CardTitle>
                     </CardHeader>
-                    {/* Description shows only on hover */}
-                    <CardContent
-                      className="p-0 mt-2 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-screen transition-all duration-400 ease-in-out"
+                    <motion.div
+                      initial={false}
+                      animate={{
+                        opacity: expandedIndex === index ? 1 : 0,
+                        y: expandedIndex === index ? 0 : 10,
+                        height: expandedIndex === index ? "auto" : 0,
+                      }}
+                      transition={{ duration: 0.35 }}
+                      className="overflow-hidden text-sm text-neutral-200 leading-relaxed"
                     >
-                      <p className="text-sm text-neutral-200 leading-relaxed">
-                        {project.details}
-                      </p>
-                    </CardContent>
+                      {project.details}
+                    </motion.div>
                   </div>
                 </motion.div>
               </motion.div>
