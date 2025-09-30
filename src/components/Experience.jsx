@@ -61,18 +61,20 @@ const Experience = () => {
             <h6 className="mb-2 font-semibold">Data Science Intern</h6>
             <span className="text-sm text-purple-200">Cognifyz Technologies</span>
             <p className="mb-2 mt-2 text-sm">
-              Contributed to data visualization and data science projects to deliver data-driven solutions improving client insights and reporting.
+              Contributed to data visualization and data science projects
+              to deliver data-driven solutions improving client insights and
+              reporting.
             </p>
             <div className="flex space-x-4">
               <button
                 onClick={() => window.open(offerLetterCognifyz, "_blank")}
-                className="px-4 py-2 rounded text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:opacity-90 transition-transform transform hover:scale-105"
+                className="inline-block rounded bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-600 transition-colors"
               >
                 Offer Letter
               </button>
               <button
                 onClick={() => window.open(certificateCognifyz, "_blank")}
-                className="px-4 py-2 rounded text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:opacity-90 transition-transform transform hover:scale-105"
+                className="inline-block rounded bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-600 transition-colors"
               >
                 Completion Certificate
               </button>
@@ -99,18 +101,20 @@ const Experience = () => {
             <h6 className="mb-2 font-semibold">Full Stack Developer Intern</h6>
             <span className="text-sm text-purple-200">NullClass</span>
             <p className="mb-2 mt-2 text-sm">
-              Built two major projects: a chatbot with OTP authentication for programming questions, and a subscription system with integrated payment gateways for tiered access plans.
+              Built two major projects: a chatbot with OTP authentication for
+              programming questions, and a subscription system with integrated
+              payment gateways for tiered access plans.
             </p>
             <div className="flex space-x-4">
               <button
                 onClick={() => window.open(Nullclass_ol, "_blank")}
-                className="px-4 py-2 rounded text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:opacity-90 transition-transform transform hover:scale-105"
+                className="inline-block rounded bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-600 transition-colors"
               >
                 Offer Letter
               </button>
               <button
                 onClick={() => window.open(Nullclass_cc, "_blank")}
-                className="px-4 py-2 rounded text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:opacity-90 transition-transform transform hover:scale-105"
+                className="inline-block rounded bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-600 transition-colors"
               >
                 Completion Certificate
               </button>

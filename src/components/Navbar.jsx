@@ -83,7 +83,7 @@ function Navbar() {
               Experience
             </a>
             <a
-              href="#certificate"
+              href="#certifications"
               className="block py-2 px-4 text-sm font-semibold text-white hover:text-purple-400 transition-colors duration-200"
             >
               Certificate
