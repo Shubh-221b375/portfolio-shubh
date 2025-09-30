@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardContent,
-} from "../components/components/ui/card"; // Adjust this path as needed
+} from "../components/components/ui/card";
 import "../index.css";
 
 const cardVariants = {
@@ -48,11 +48,14 @@ const projects = [
 ];
 
 const Freelance = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
-    <section
-      id="freelance"
-      className="relative border-b border-neutral-900 pb-24 pt-32"
-    >
+    <section id="freelance" className="relative border-b border-neutral-900 pb-24 pt-32">
       {/* Background blur */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-fuchsia-600/20 via-purple-700/10 to-indigo-500/20 blur-3xl opacity-30" />
       <div className="container mx-auto px-4">
@@ -97,41 +100,44 @@ const Freelance = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="group"
+                className="group cursor-pointer"
+                onClick={() => toggleExpand(index)}
               >
                 <motion.div
-                  initial={{ height: 140, boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
-                  whileHover={{
-                    height: 220,
-                    boxShadow: "0 10px 44px rgba(168,85,247,0.10), 0 2px 20px rgba(139,92,246,0.14)",
-                    background: "rgba(139,92,246,0.06)",
+                  initial={{ boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}
+                  animate={{
+                    height: expandedIndex === index ? "auto" : 140,
+                    boxShadow:
+                      expandedIndex === index
+                        ? "0 10px 44px rgba(168,85,247,0.10), 0 2px 20px rgba(139,92,246,0.14)"
+                        : "0 1px 4px rgba(0,0,0,0.05)",
+                    background: expandedIndex === index ? "rgba(139,92,246,0.06)" : "transparent",
                   }}
-                  transition={{
-                    duration: 0.42,
-                    type: "tween",
-                    ease: "easeInOut",
-                  }}
-                  style={{
-                    willChange: "height, box-shadow, background",
-                  }}
-                  className="relative h-full rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-transparent transition-all cursor-pointer"
+                  transition={{ duration: 0.42, type: "tween", ease: "easeInOut" }}
+                  style={{ willChange: "height, box-shadow, background" }}
+                  className="relative rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-transparent transition-all"
                 >
                   {/* Gradient border */}
                   <div className="absolute inset-0 p-[1px] rounded-2xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative h-full rounded-2xl p-6 flex flex-col justify-start bg-gradient-to-br from-[#1e1b4b]/40 via-[#0f172a]/50 to-[#4c1d95]/40">
+                  <div className="relative rounded-2xl p-6 flex flex-col justify-start bg-gradient-to-br from-[#1e1b4b]/40 via-[#0f172a]/50 to-[#4c1d95]/40">
                     <CardHeader className="p-0 mb-2">
                       <CardTitle className="text-lg font-semibold bg-gradient-to-r from-fuchsia-300 to-indigo-300 bg-clip-text text-transparent">
                         {project.title}
                       </CardTitle>
                     </CardHeader>
-                    {/* Description reveals anywhere in card on hover */}
-                    <CardContent
-                      className="p-0 mt-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400 ease-in-out"
+
+                    <motion.div
+                      initial={false}
+                      animate={{
+                        opacity: expandedIndex === index ? 1 : 0,
+                        y: expandedIndex === index ? 0 : 10,
+                        height: expandedIndex === index ? "auto" : 0,
+                      }}
+                      transition={{ duration: 0.35 }}
+                      className="overflow-hidden text-sm text-neutral-200 leading-relaxed"
                     >
-                      <p className="text-sm text-neutral-200 leading-relaxed">
-                        {project.details}
-                      </p>
-                    </CardContent>
+                      {project.details}
+                    </motion.div>
                   </div>
                 </motion.div>
               </motion.div>
