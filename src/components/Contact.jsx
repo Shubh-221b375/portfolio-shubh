@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import {motion} from "framer-motion";
 import "../index.css";
 const Contact = () => {
@@ -24,7 +24,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_z9nhalv',
+        'service_7p3unz4',
         'template_75ml66c',
         {
           user_name: formData.name,
